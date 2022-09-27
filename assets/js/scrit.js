@@ -4,7 +4,10 @@ const	fireHeigth = 10;
 
 function start() {
 	createFireDataStructure();
+	createFireSource();
 	renderFire();
+
+	setInterval(calculateFirePropagation, 1000);
 }
 
 function createFireDataStructure() {
@@ -16,7 +19,27 @@ function createFireDataStructure() {
 }
 
 function calculateFirePropagation() {
+	for (let column = 0; column < fireHeigth; column++) {
+		for (let row = 0; row < fireWidth; row++) {
+			const	pixelIndex = column + (fireWidth * row);
+			updateFireIntensityPerPixel(pixelIndex);
+		}
+	}
+	renderFire();
+}
 
+function updateFireIntensityPerPixel(currenPixelIndex) {
+	const	belowPixelIndex = currenPixelIndex + fireWidth;
+
+	if (belowPixelIndex >= (fireWidth * fireHeigth)) {
+		return ;
+	}
+
+	const	decay = 1;
+	const	belowPixeFireIntensity = firePixelsArray[belowPixelIndex];
+	const	newFireIntensity = belowPixeFireIntensity - decay >= 0 ? belowPixeFireIntensity - decay : 0;
+
+	firePixelsArray[currenPixelIndex] = newFireIntensity;
 }
 
 function renderFire() {
@@ -39,7 +62,12 @@ function renderFire() {
 }
 
 function createFireSource() {
-	
+	for (let column = 0; column <= fireWidth; column++) {
+		const	overflowPixelIndex = (fireWidth * fireHeigth);
+		const	pixelIndex = (overflowPixelIndex - fireWidth) + column;
+
+		firePixelsArray[pixelIndex] = 36;
+	}
 }
 
 start();
