@@ -1,6 +1,6 @@
 const	firePixelsArray = [];
-const	fireWidth = 2;
-const	fireHeigth = 3;
+const	fireWidth = 10;
+const	fireHeigth = 10;
 
 function start() {
 	createFireDataStructure();
