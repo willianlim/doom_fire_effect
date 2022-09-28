@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>DOOM Fire</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>DOOM Fire Effect</title>
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
 	<body>
-		<div id="fireCanvas"></div>
+		<header>
+			<h1>DOOM Fire Effect</h1>
+			<p><a target="_blank" href="https://github.com/willianlim/">https://github.com/willianlim/</a></p>
+		</header>
+		<section>
+			<div id="fireCanvas"></div>
+		</section>
+		<section id="controlsContainer">
+			<div id="controlBoxes">
+				<div class="controls" id="windEffect">
+					<h3>Wind Effect</h3>
+					<button id="lefWind" onclick="changedWindDirection(0)">To the left</button>
+					<button id="noWind" onclick="changedWindDirection(1)">No Wind</button>
+					<button id="rightWind" onclick="changedWindDirection(2)">To the rights</button>
+				</div>
+
+				<div class="controls" id="changeColor">
+					<h3>Change Fire Colors</h3>
+					<input type="range" name="hueInput" id="hueInput" value="0" min="0" max="360">
+				</div>
+
+				<div class="controls" id="fireControl">
+					<h3>Fire Control</h3>
+					<button onclick="destroyFireSource()">Min Fire</button>
+					<button onclick="createFireSource()">Max Fire</button>
+					<button onclick="decreaseFireSource()">-</button>
+					<button onclick="increaseFireSource()">+</button>
+				</div>
+			</div>
+			<button id="debug" onclick="toggleDebugMode()">Toggle Debug Mode</button>
+		</section>
+		<footer>
+			<p>I'm So happy and proud of this prooject ! :´)</p>
+		</footer>
+		<script src="assets/js/script.js" type="module"></script>
 	</body>
-	<script src="assets/js/script.js" type="module"></script>
 </html>
