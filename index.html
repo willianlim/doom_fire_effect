@@ -12,37 +12,41 @@
 			<p><a target="_blank" href="https://github.com/willianlim/">https://github.com/willianlim/</a></p>
 		</header>
 
-		<main>
+		<section>
 			<div id="fireCanvas"></div>
+		</section>
 
-			<div>
+		<section id="controlsContainer">
+			<div id="controlBoxes"></div>
+
+			<div class="controls">
 				<h3>Change the wind!</h3>
-				<button onclick="changeWinDirection(0)"> < </button>
+				<button onclick="changeWinDirection(0)"> To the left </button>
 				<button onclick="changeWinDirection(1)">No wind</button>
-				<button onclick="changeWinDirection(2)"> > </button>
+				<button onclick="changeWinDirection(2)"> To the right </button>
 			</div>
 
-			<div>
+			<div class="controls">
 				<h3>Change Fire Colors</h3>
 				<input type="range" id="hueInput" value="0" min="0" max="360">
 			</div>
 
-			<div>
+			<div class="controls">
 				<h3>Fire Control</h3>
-				<button onclick="dreaseFireSource()">-</button>
 				<button onclick="destroyFireSource()">Min Fire</button>
+				<button onclick="dreaseFireSource()">-</button>
 				<button onclick="createFireSource()">Max Fire</button>
 				<button onclick="increaseFireSource()">+</button>
 			</div>
 
-			<div>
-				<button onclick="toggleDebugMode()">Toggle Debug Mode</button>
-			</div>
-		</main>
+		</section>
 
+		<div>
+			<button onclick="toggleDebugMode()">Toggle Debug Mode</button>
+		</div>
 		<footer>
 			<p>I'm So happy and proud of this prooject ! :´)</p>
 		</footer>
+		<script src="assets/js/script.js"></script>
 	</body>
-	<script src="assets/js/script.js"></script>
 </html>

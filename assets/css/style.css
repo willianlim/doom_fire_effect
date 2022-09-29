@@ -62,19 +62,14 @@ td.pixel {
 
 /* Div's styles */
 section#controlsContainer {
-	margin: auto;
-	box-sizing: border-box;
-	text-align: center;
-}
-
-div#controlBoxes {
 	display: flex;
-	flex-flow: wrap row;
 }
 
 div.controls {
+	border: 1px solid whitesmoke;
+	text-align: center;
 	width: 150px;
 	margin: 10px;
 	padding: 5px;
-	vertical-align: auto;
+	text-align: center;
 }
