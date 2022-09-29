@@ -15,8 +15,15 @@
 		<main>
 			<div id="fireCanvas"></div>
 
-			<h3>Fire Control</h3>
 			<div>
+				<h3>Change the wind!</h3>
+				<button onclick="changeWinDirection(0)"> < </button>
+				<button onclick="changeWinDirection(1)">No wind</button>
+				<button onclick="changeWinDirection(2)"> > </button>
+			</div>
+
+			<div>
+				<h3>Fire Control</h3>
 				<button onclick="dreaseFireSource()">-</button>
 				<button onclick="destroyFireSource()">Min Fire</button>
 				<button onclick="createFireSource()">Max Fire</button>
@@ -25,16 +32,6 @@
 
 			<div>
 				<button onclick="toggleDebugMode()">Toggle Debug Mode</button>
-			</div>
-
-			<div>
-				<h3>Change the wind!</h3>
-			</div>
-
-			<div>
-				<button onclick="changeWinDirection(0)"> < </button>
-				<button onclick="changeWinDirection(1)">No wind</button>
-				<button onclick="changeWinDirection(2)"> > </button>
 			</div>
 		</main>
 
