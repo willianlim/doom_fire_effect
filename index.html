@@ -11,36 +11,36 @@
 			<h1>DOOM Fire Effect</h1>
 			<p><a target="_blank" href="https://github.com/willianlim/">https://github.com/willianlim/</a></p>
 		</header>
-		<section>
+
+		<main>
 			<div id="fireCanvas"></div>
-		</section>
-		<section id="controlsContainer">
-			<div id="controlBoxes">
-				<div class="controls" id="windEffect">
-					<h3>Wind Effect</h3>
-					<button id="lefWind" onclick="changedWindDirection(0)">To the left</button>
-					<button id="noWind" onclick="changedWindDirection(1)">No Wind</button>
-					<button id="rightWind" onclick="changedWindDirection(2)">To the rights</button>
-				</div>
 
-				<div class="controls" id="changeColor">
-					<h3>Change Fire Colors</h3>
-					<input type="range" name="hueInput" id="hueInput" value="0" min="0" max="360">
-				</div>
-
-				<div class="controls" id="fireControl">
-					<h3>Fire Control</h3>
-					<button onclick="destroyFireSource()">Min Fire</button>
-					<button onclick="createFireSource()">Max Fire</button>
-					<button onclick="decreaseFireSource()">-</button>
-					<button onclick="increaseFireSource()">+</button>
-				</div>
+			<h3>Fire Control</h3>
+			<div>
+				<button onclick="dreaseFireSource()">-</button>
+				<button onclick="destroyFireSource()">Min Fire</button>
+				<button onclick="createFireSource()">Max Fire</button>
+				<button onclick="increaseFireSource()">+</button>
 			</div>
-			<button id="debug" onclick="toggleDebugMode()">Toggle Debug Mode</button>
-		</section>
+
+			<div>
+				<button onclick="toggleDebugMode()">Toggle Debug Mode</button>
+			</div>
+
+			<div>
+				<h3>Change the wind!</h3>
+			</div>
+
+			<div>
+				<button onclick="changeWinDirection(0)"> < </button>
+				<button onclick="changeWinDirection(1)">No wind</button>
+				<button onclick="changeWinDirection(2)"> > </button>
+			</div>
+		</main>
+
 		<footer>
 			<p>I'm So happy and proud of this prooject ! :´)</p>
 		</footer>
-		<script src="assets/js/script.js" type="module"></script>
 	</body>
+	<script src="assets/js/script.js"></script>
 </html>
