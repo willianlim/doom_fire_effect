@@ -4,6 +4,7 @@ body {
 	flex-flow: column wrap;
 	justify-content: center;
 	align-items: center;
+	margin: 100px;
 }
 
 h1 {
@@ -62,6 +63,7 @@ td.pixel {
 
 /* Div's styles */
 section#controlsContainer {
+	margin: 5px;
 	display: flex;
 }
 
