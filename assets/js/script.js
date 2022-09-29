@@ -1,6 +1,6 @@
 const	firePixelsArray = [];
-const	fireWidth = 60;
-const	fireHeigth = 40;
+let		fireWidth = 60;
+let		fireHeigth = 40;
 let		debug = false;
 let		direction = 0;
 const fireColorsPalette = [
@@ -43,7 +43,6 @@ function createFireSource() {
 }
 
 function renderFire() {
-	const	debug = false;
 	let	html = '<table cellpadding=0 cellspacing=0>';
 
 	for (let row = 0; row < fireHeigth; row++) {
@@ -106,6 +105,21 @@ function calculateFirePropagation() {
 		}
 	}
 	renderFire();
+}
+
+function toggleDebugMode() {
+	console.log('estou no toggle');
+	if (debug === false) {
+		fireWidth = 25;
+		fireHeigth = 17;
+		debug = true;
+	} else {
+		fireWidth = 60;
+		fireHeigth = 40;
+		debug = false;
+	}
+	createFireDataStructure();
+	createFireSource();
 }
 
 function start() {
