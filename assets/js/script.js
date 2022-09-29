@@ -107,8 +107,46 @@ function calculateFirePropagation() {
 	renderFire();
 }
 
+function destroyFireSource() {
+	for (let column = 0; column <= fireWidth; column++) {
+		const	overflowPixelIndex = (fireWidth * fireHeigth);
+		const	pixelIndex = (overflowPixelIndex - fireWidth) + column;
+
+		firePixelsArray[pixelIndex] = 0;
+	}
+}
+
+function increaseFireSource() {
+	for (let column = 0; column <= fireWidth; column++) {
+		const	overflowPixelIndex = (fireWidth * fireHeigth);
+		const	pixelIndex = (overflowPixelIndex - fireWidth) + column;
+		const	currentFireIntensity = firePixelsArray[pixelIndex];
+
+		if (currentFireIntensity < 36) {
+			const	increase = Math.floor(Math.random() * 14);
+			const	newFireIntensity = currentFireIntensity + increase >= 36 ? 36 : currentFireIntensity + increase;
+
+			firePixelsArray[pixelIndex] = newFireIntensity;
+		}
+	}
+}
+
+function dreaseFireSource() {
+	for (let column = 0; column <= fireWidth; column++) {
+		const	overflowPixelIndex = (fireWidth * fireHeigth);
+		const	pixelIndex = (overflowPixelIndex - fireWidth) + column;
+		const	currentFireIntensity = firePixelsArray[pixelIndex];
+
+		if (currentFireIntensity > 0) {
+			const	decay = Math.floor(Math.random() * 14);
+			const	newFireIntensity = currentFireIntensity - decay >= 0 ? currentFireIntensity - decay : 0;
+
+			firePixelsArray[pixelIndex] = newFireIntensity;
+		}
+	}
+}
+
 function toggleDebugMode() {
-	console.log('estou no toggle');
 	if (debug === false) {
 		fireWidth = 25;
 		fireHeigth = 17;
