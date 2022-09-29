@@ -64,16 +64,16 @@ function renderFire() {
 		for (let column = 0; column < fireWidth; column++) {
 			const	pixelIndex = column + (fireWidth * row);
 			const	fireIntensity = firePixelsArray[pixelIndex];
+			const	color = fireColorsPalette[fireIntensity]
+			const	colorString = `${color.r},${color.g},${color.b}`
 
 			if (debug === true) {
 				html += '<td>';
 				html += `<div class="pixel__index">${pixelIndex}</div>`;
-				html += fireIntensity;
+				html += `<div style="color: rgb(${colorString})">${fireIntensity}</div>`;
 				html += '</td>';
 			} else {
 				if (document.getElementById('hueInput').value == 0) {
-					const color = fireColorsPalette[fireIntensity]
-					const colorString = `${color.r},${color.g},${color.b}`
 					html += `<td class="pixel" style="background-color: rgb(${colorString})">`
 					html += '</td>'
 				} else {
