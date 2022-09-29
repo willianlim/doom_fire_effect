@@ -2,7 +2,11 @@
 
 🔥 Doom Fire Algorithm Playground.
 
-![alt text](./assets/imgs/doom_fire_effect.gif)
+<p align="center">
+  <a href="https://willianlim.github.io/doom_fire_effect/">
+    <img src="https://github.com/willianlim/doom_fire_effect/blob/main/assets/imgs/doom_fire_effect.gif?raw=true" width="490">
+  </a>
+</p>
 
 ## 📥 Installation
 
