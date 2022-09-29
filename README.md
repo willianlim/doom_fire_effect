@@ -1,6 +1,6 @@
 # `Doom Fire Effect`
 
-🔥 Doom Fire Algorithm Playground.
+🔥 Doom is a 1993 first-person shooter (FPS) game developed by id Software for MS-DOS. Players assume the role of a space marine, popularly known as Doomguy, fighting their way through hordes of invading demons from hell.
 
 <p align="center">
   <a href="https://willianlim.github.io/doom_fire_effect/">
