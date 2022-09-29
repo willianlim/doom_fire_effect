@@ -2,6 +2,8 @@
 
 🔥 Doom Fire Algorithm Playground.
 
+![alt text](./assets/imgs/doom_fire_effect.gif)
+
 ## 📥 Installation
 
 ```bash
